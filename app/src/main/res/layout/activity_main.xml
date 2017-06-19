@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp"
+	tools:context="com.hv.caststopbug.MainActivity">
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Connect to cast device, press play, when sound starts press stop.\n\nAfter this playing is not possible.\nScreen display only black background.\n\nSame scenario happens when press `Start Play` multiple times (1s delay), on logcat show `onFailure` message `statusCode=unknown status code: 2103`\n\nOnly reconnect to cast can help.\nIt looks like receiver hangs on something.\n\nTested on:\n- Chromecast 1\n- Chrome Audio Cast\n- Shield TV"/>
+	
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="start play"
+		android:onClick="handlePlay"/>
+	
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="stop play"
+		android:onClick="handleStop"/>
+	
+
+</LinearLayout>
